@@ -1,0 +1,11 @@
+body {
+    display: flex;
+    padding: 1em;
+    .sidebar {
+        flex: 1;
+    }   
+
+    .mainContent {
+        flex: 3;
+    }
+}
