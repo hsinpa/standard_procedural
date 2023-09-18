@@ -8,9 +8,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <div className="sidebar"><SideBarDom></SideBarDom></div>
-        <main className="mainContent">{children}</main>
+      <body className="className">
+        <aside className="column"><SideBarDom></SideBarDom></aside>
+        <main className="column is-three-quarters">{children}</main>
       </body>
     </html>
   )

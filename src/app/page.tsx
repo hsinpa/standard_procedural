@@ -1,11 +1,11 @@
 import Image from 'next/image'
-import {SideBarDom} from './sidebar/SideDomElements'
+import FieldSelectionPage from './field_selection/page'
 import Link from 'next/link'
 
 export default function Home() {
   return (
     <div>
-      <h1>Hello world</h1>
+      <FieldSelectionPage></FieldSelectionPage>
     </div>
   )
 }
