@@ -1,26 +1,22 @@
 'use client'
-import { MouseEventHandler, useState } from 'react'
 import Link from 'next/link';
-
-
-function OnSideLinkClick(e: React.MouseEvent<HTMLElement>) {
-
-    let queries = document.querySelectorAll(".menu-list li a");
-    queries.forEach(x=>{
-        x.className="";
-    });
-    e.currentTarget.className="is-active";
-}
+import { usePathname } from 'next/navigation'
 
 export interface SidebarProps {
     url: string,
-    name: string,
-    default_class: string,
+    name: string
   }
   
-  export function SidebarLink({url, name, default_class} : SidebarProps) {
+  export function SidebarLink({url, name} : SidebarProps) {
+    const pathname = usePathname()
+    console.log(pathname);
+
+    let highlight_class = pathname.includes(url) ? "is-active" : "";
+
+    if (url == "/field_selection" && pathname == "/")  highlight_class = "is-active";
+
     return (
-      <li><Link onClick={OnSideLinkClick} className={default_class} href={url}>{name}</Link></li>
+      <li><Link href={url} className={highlight_class} >{name}</Link></li>
     )
   }
   
