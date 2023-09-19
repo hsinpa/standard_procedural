@@ -10,7 +10,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="className">
         <aside className="column"><SideBarDom></SideBarDom></aside>
-        <main className="column is-three-quarters">{children}</main>
+        <main className="column is-four-fifths">{children}</main>
       </body>
     </html>
   )

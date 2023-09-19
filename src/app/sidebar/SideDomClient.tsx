@@ -9,11 +9,9 @@ export interface SidebarProps {
   
   export function SidebarLink({url, name} : SidebarProps) {
     const pathname = usePathname()
-    console.log(pathname);
-
     let highlight_class = pathname.includes(url) ? "is-active" : "";
 
-    if (url == "/field_selection" && pathname == "/")  highlight_class = "is-active";
+    if (url == "/procedural/field_selection" && pathname == "/")  highlight_class = "is-active";
 
     return (
       <li><Link href={url} className={highlight_class} >{name}</Link></li>
