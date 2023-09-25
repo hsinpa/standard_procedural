@@ -4,10 +4,11 @@ import { usePathname } from 'next/navigation'
 
 export interface SidebarProps {
     url: string,
-    name: string
+    name: string,
+    classname?: string,
   }
   
-  export function SidebarLink({url, name} : SidebarProps) {
+  export function SidebarDesktopLink({url, name} : SidebarProps) {
     const pathname = usePathname()
     let highlight_class = pathname.includes(url) ? "is-active" : "";
 
@@ -15,6 +16,12 @@ export interface SidebarProps {
 
     return (
       <li><Link href={url} className={highlight_class} >{name}</Link></li>
+    )
+  }
+  
+  export function SidebarMobileLink({url, name, classname} : SidebarProps) {
+    return (
+      <Link href={url} className={classname}>{name}</Link>
     )
   }
   

@@ -1,32 +1,80 @@
-import {SidebarProps, SidebarLink} from './SideDomClient';
+'use client'
+import Link from 'next/link';
+import {SidebarProps, SidebarDesktopLink, SidebarMobileLink} from './SideDomClient';
 import React from 'react';
 
-export const SideBarDom  = () => {
-  return <div className='menu'>
+export const VerticalSideBarDom  = () => {
+  return <div className='menu desktop-menu'>
 	<p className="menu-label">
 		Procedural
 	</p>
 	<ul className='menu-list'>
-		<SidebarLink name="Field selection" url="/procedural/field_selection"></SidebarLink>
-		<SidebarLink name="Data collection" url="/procedural/data_collection"></SidebarLink>
-		<SidebarLink name="Work" url="/procedural/work"></SidebarLink>
-		<SidebarLink name="Report" url="/procedural/report"></SidebarLink>
-		<SidebarLink name="Note" url="/procedural/note"></SidebarLink>
+		<SidebarDesktopLink name="Field selection" url="/procedural/field_selection"></SidebarDesktopLink>
+		<SidebarDesktopLink name="Data collection" url="/procedural/data_collection"></SidebarDesktopLink>
+		<SidebarDesktopLink name="Work" url="/procedural/work"></SidebarDesktopLink>
+		<SidebarDesktopLink name="Report" url="/procedural/report"></SidebarDesktopLink>
+		<SidebarDesktopLink name="Note" url="/procedural/note"></SidebarDesktopLink>
 	</ul>
 
 	<p className="menu-label">
 		Learing
 	</p>
 	<ul className='menu-list'>
-		<SidebarLink name="Video resource" url="/learning/video_resources"></SidebarLink>
+		<SidebarDesktopLink name="Video resource" url="/learning/video_resources"></SidebarDesktopLink>
 	</ul>
 
 	<p className="menu-label">
 		Tools
 	</p>
 	<ul className='menu-list'>
-		<SidebarLink name="Tools review" url="/tools/tools_review"></SidebarLink>
+		<SidebarDesktopLink name="Tools review" url="/tools/tools_review"></SidebarDesktopLink>
 	</ul>
 
     </div>;
   }
+
+  export const HorizontalSideBarDom  = () => {
+
+	function on_navbar_click(e: any) {
+		document.querySelector(".navbar-burger")?.classList.toggle("is-active");
+		document.querySelector(".navbar-menu")?.classList.toggle("is-active");
+	}
+
+	return (
+	
+	<nav className="navbar mobile-menu" role="navigation" aria-label="main navigation">
+	<div className="navbar-brand">
+		<a className="navbar-item" href="https://bulma.io">
+		<img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"></img>
+		</a>
+
+		<a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" onClick={on_navbar_click}>
+		<span aria-hidden="true"></span>
+		<span aria-hidden="true"></span>
+		<span aria-hidden="true"></span>
+		</a>
+	</div>
+
+		<div className="navbar-menu">
+			<div className="navbar-start">
+				<div className="navbar-item has-dropdown is-hoverable">
+
+					<SidebarMobileLink name="Procedural" url="/procedural/field_selection" classname='navbar-link'></SidebarMobileLink>
+
+					<div className="navbar-dropdown">
+						<SidebarMobileLink name="Field selection" url="/procedural/field_selection" classname='navbar-item'></SidebarMobileLink>
+						<SidebarMobileLink name="Data collection" url="/procedural/data_collection" classname='navbar-item'></SidebarMobileLink>
+						<SidebarMobileLink name="Work" url="/procedural/work" classname='navbar-item'></SidebarMobileLink>
+						<SidebarMobileLink name="Report" url="/procedural/report" classname='navbar-item'></SidebarMobileLink>
+						<SidebarMobileLink name="Note" url="/procedural/note" classname='navbar-item'></SidebarMobileLink>
+					</div>
+				</div>
+
+				<SidebarMobileLink name="Video resource" url="/learning/video_resources" classname='navbar-item'></SidebarMobileLink>
+				<SidebarMobileLink name="Tools review" url="/tools/tools_review" classname='navbar-item'></SidebarMobileLink>
+			</div>
+		</div>
+	</nav>	
+	);
+}
+  

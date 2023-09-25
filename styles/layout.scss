@@ -1,12 +1,37 @@
 body {
-    display: flex;
     padding: 1em;
-    .sidebar {
-        flex: 1;
+
+    aside {
+        display: inline-block;
+
+        .desktop-menu {
+            min-width: 14em;
+            padding: 1em;
+            display: inline-block;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            display: block;
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .desktop-menu {
+                display: none;
+            }
+        }
     }   
 
-    .mainContent {
-        flex: 3;
+    main {
+        padding: 1em;
+
+        display: inline-block;
+        vertical-align:top; /* <---- this */
     }
 }
 

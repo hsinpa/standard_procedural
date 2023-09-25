@@ -1,5 +1,5 @@
 import '../../styles/globals.scss'
-import { SideBarDom } from './sidebar/SideDomElements'
+import { VerticalSideBarDom, HorizontalSideBarDom } from './sidebar/SideDomElements'
 
 export default function RootLayout({
   children,
@@ -8,9 +8,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="className">
-        <aside className="column"><SideBarDom></SideBarDom></aside>
-        <main className="column is-four-fifths">{children}</main>
+      <body>
+        <aside><VerticalSideBarDom></VerticalSideBarDom><HorizontalSideBarDom></HorizontalSideBarDom></aside>
+        <main>{children}</main>
       </body>
     </html>
   )
