@@ -1,0 +1,25 @@
+.subject_component {
+    padding: 2rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 1em;
+    background-color: blueviolet;
+
+    width: 60em;
+  
+    img {
+        max-width: 6em;
+        min-width: 4em;
+    }
+
+    .component_content {
+    }
+
+}
+
+.topic_component {
+
+}
+

@@ -5,8 +5,13 @@ import React from 'react';
 
 export const VerticalSideBarDom  = () => {
   return <div className='menu desktop-menu'>
+
+	<ul className='menu-list'>
+		<SidebarDesktopLink name="Procedural" url="/procedural"></SidebarDesktopLink>
+	</ul>
+
 	<p className="menu-label">
-		Procedural
+		Law Learning
 	</p>
 	<ul className='menu-list'>
 		<SidebarDesktopLink name="Field selection" url="/procedural/field_selection"></SidebarDesktopLink>
