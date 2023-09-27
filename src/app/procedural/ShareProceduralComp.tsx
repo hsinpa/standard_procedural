@@ -4,7 +4,7 @@ export function ShareSubjectComponent({image_path, topic, content} : {image_path
         <div className="subject_component">
             <img src="./texture/icon/law_learning.jpg" alt={topic}></img>
             <div className="component_content">
-                <h2 className="title is-3">{topic}</h2>
+                <h2 className="title is-4">{topic}</h2>
                 <p>{content}</p>
             </div>
         </div>

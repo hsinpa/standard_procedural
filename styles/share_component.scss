@@ -1,13 +1,14 @@
 .subject_component {
-    padding: 2rem;
+    padding: 3rem 2rem;
     
     display: flex;
     align-items: center;
     justify-content: left;
     gap: 1em;
-    background-color: blueviolet;
-
-    width: 60em;
+    background: rgb(0,82,180);
+    background: linear-gradient(90deg, rgba(0,82,180,1) 0%, rgba(82,113,204,1) 35%, rgba(102,157,222,1) 100%);
+    border-radius: 1em;
+    width: 50em;
   
     img {
         max-width: 6em;
@@ -15,11 +16,30 @@
     }
 
     .component_content {
+        width: calc(100% - 5em);
+
+        h2 {
+            color: white;
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            background-color: white;
+            border-radius: 1em;
+            padding: 0.5em 1.5em;
+            
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+          
+            width: 70%;
+        }
     }
 
 }
 
 .topic_component {
+
 
 }
 
