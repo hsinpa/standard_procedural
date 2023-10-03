@@ -1,5 +1,10 @@
 body {
     padding: 1em;
+    display: flex;
+
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
 
     aside {
         display: inline-block;

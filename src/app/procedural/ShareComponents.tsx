@@ -14,7 +14,7 @@ export function ShareSubjectComponent({image_path, topic, content} : {image_path
 export function ShareTopicComponent({topic, content} : {topic: string, content: string}) {
     return (
         <div className="topic_component">
-                <h2>{topic}</h2>
+                <h2 className="title is-5">{topic}</h2>
                 <p>{content}</p>
         </div>
     );

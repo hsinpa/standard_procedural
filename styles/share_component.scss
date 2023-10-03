@@ -9,6 +9,8 @@
     background: linear-gradient(90deg, rgba(0,82,180,1) 0%, rgba(82,113,204,1) 35%, rgba(102,157,222,1) 100%);
     border-radius: 1em;
     width: 50em;
+
+    margin-bottom: 1em;
   
     img {
         max-width: 6em;
@@ -39,7 +41,33 @@
 }
 
 .topic_component {
+    border-radius: 1em;
 
+    padding: 3rem 2rem;
+    background: rgb(0,82,180);
+    background: linear-gradient(90deg, rgba(0,82,180,1) 0%, rgba(20,115,230,1) 85%, rgba(67,149,242,1) 100%);
+    max-width: 20em;
 
+    display: inline-block;
+    margin: 1em 2em 1em 0em;
+
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
+
+    h2 {
+        color: white;
+        margin-bottom: 0.5em;
+    }
+
+    p {
+        background-color: white;
+        border-radius: 1em;
+        padding: 0.5em 1.5em;
+        
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
 }
 

@@ -1,6 +1,6 @@
 import {UICategoryInterface, UITopicInterface, UISubjectInterface} from './data_structure';
 
-const SUBJECT_LAW_LEARNING = "law_learning";
+export const SUBJECT_LAW_LEARNING = "SUBJECT_LAW_LEARNING";
 
 const PageIDTable = Object.freeze({
     Law_Learning : "law_learning",
@@ -58,6 +58,8 @@ export function GetSubjectComponent(id: string) {
     if (id in PageDataJSON) {
         return PageDataJSON[id];
     }
+
+    console.log(PageDataJSON)
 
     return null;
 }
