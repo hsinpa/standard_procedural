@@ -1,16 +1,9 @@
-import React from 'react';
+'use client';
+import { PageIDTable } from '@/static_data';
+import {GetProceduralComponent} from '../ClientSideComponents';
 
 const DataCollectionPage  = () => {
-    return <div>
-        <h1 className='title'>Data Collection</h1><br></br>
-
-        <div className='url_content'>
-            <a className='button' href="https://chat.openai.com/"  target="_blank" rel="noopener noreferrer">Legal database</a>
-            <a className='button' href="https://chat.openai.com/"  target="_blank" rel="noopener noreferrer">Record analysis</a>
-            <a className='button' href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer">Docs support</a>
-            <a className='button' href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer">GPT</a>
-        </div>
-	</div>;
+    return GetProceduralComponent(PageIDTable.Law_Learning_Collection);
 }
 
 export default DataCollectionPage;

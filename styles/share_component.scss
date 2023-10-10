@@ -71,3 +71,54 @@
     }
 }
 
+.learng_item_component {
+    border-radius: 1em;
+
+    padding: 3rem 2rem;
+    max-width: 35em;
+    background-repeat: no-repeat;
+    background-size: auto;
+    object-fit: cover;
+    background-position: center;
+
+    h2 {
+        color: white;
+        margin-bottom: 0.5em;
+    }
+
+    p {
+        color: white;
+    }
+
+    section {
+        margin-top: 2em;
+        text-align: right;
+        .video_button {
+            gap: 0.5em;
+            width: 12em;
+        }
+    }
+}
+
+.learng_title_component {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+
+    a {
+        width: 4em;
+        margin: -1.5em;
+        z-index: 1;
+    }
+
+    .topic_component {
+        margin: 0;
+    }
+
+    .component_langs {
+        button {
+            margin: 0.5em;
+        }
+    }
+}

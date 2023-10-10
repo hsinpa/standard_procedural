@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import FieldSelectionPage from './procedural/field_selection/page'
+import FieldSelectionPage from './procedural/topic/page'
 import Link from 'next/link'
 
 export default function Home() {

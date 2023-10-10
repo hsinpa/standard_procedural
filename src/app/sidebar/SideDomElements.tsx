@@ -14,11 +14,11 @@ export const VerticalSideBarDom  = () => {
 		Law Learning
 	</p>
 	<ul className='menu-list'>
-		<SidebarDesktopLink name="Field selection" url="/procedural/field_selection"></SidebarDesktopLink>
-		<SidebarDesktopLink name="Data collection" url="/procedural/data_collection"></SidebarDesktopLink>
-		<SidebarDesktopLink name="Work" url="/procedural/work"></SidebarDesktopLink>
-		<SidebarDesktopLink name="Report" url="/procedural/report"></SidebarDesktopLink>
-		<SidebarDesktopLink name="Note" url="/procedural/note"></SidebarDesktopLink>
+		<SidebarDesktopLink name="Topic" url="/procedural/topic"></SidebarDesktopLink>
+		<SidebarDesktopLink name="Collection" url="/procedural/data_collection"></SidebarDesktopLink>
+		<SidebarDesktopLink name="Process" url="/procedural/process"></SidebarDesktopLink>
+		<SidebarDesktopLink name="Presentation" url="/procedural/presentation"></SidebarDesktopLink>
+		<SidebarDesktopLink name="Conclusion" url="/procedural/conclusion"></SidebarDesktopLink>
 	</ul>
 
 	<p className="menu-label">

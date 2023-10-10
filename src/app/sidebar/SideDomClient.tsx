@@ -10,7 +10,7 @@ export interface SidebarProps {
   
   export function SidebarDesktopLink({url, name} : SidebarProps) {
     const pathname = usePathname()
-    let highlight_class = pathname.includes(url) ? "is-active" : "";
+    let highlight_class = pathname == url ? "is-active" : "";
 
     if (url == "/procedural/field_selection" && pathname == "/")  highlight_class = "is-active";
 
