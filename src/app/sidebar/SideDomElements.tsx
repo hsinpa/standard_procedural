@@ -63,15 +63,14 @@ export const VerticalSideBarDom  = () => {
 		<div className="navbar-menu">
 			<div className="navbar-start">
 				<div className="navbar-item has-dropdown is-hoverable">
-
-					<SidebarMobileLink name="Procedural" url="/procedural/field_selection" classname='navbar-link'></SidebarMobileLink>
+					<SidebarMobileLink name="Procedural" url="/procedural/topic" classname='navbar-link'></SidebarMobileLink>
 
 					<div className="navbar-dropdown">
-						<SidebarMobileLink name="Field selection" url="/procedural/field_selection" classname='navbar-item'></SidebarMobileLink>
-						<SidebarMobileLink name="Data collection" url="/procedural/data_collection" classname='navbar-item'></SidebarMobileLink>
-						<SidebarMobileLink name="Work" url="/procedural/work" classname='navbar-item'></SidebarMobileLink>
-						<SidebarMobileLink name="Report" url="/procedural/report" classname='navbar-item'></SidebarMobileLink>
-						<SidebarMobileLink name="Note" url="/procedural/note" classname='navbar-item'></SidebarMobileLink>
+						<SidebarMobileLink name="Topic" url="/procedural/topic" classname='navbar-item'></SidebarMobileLink>
+						<SidebarMobileLink name="Collection" url="/procedural/data_collection" classname='navbar-item'></SidebarMobileLink>
+						<SidebarMobileLink name="Process" url="/procedural/process" classname='navbar-item'></SidebarMobileLink>
+						<SidebarMobileLink name="Presentation" url="/procedural/presentation" classname='navbar-item'></SidebarMobileLink>
+						<SidebarMobileLink name="Conclusion" url="/procedural/conclusion" classname='navbar-item'></SidebarMobileLink>
 					</div>
 				</div>
 

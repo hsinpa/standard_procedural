@@ -12,7 +12,7 @@ export interface SidebarProps {
     const pathname = usePathname()
     let highlight_class = pathname == url ? "is-active" : "";
 
-    if (url == "/procedural/field_selection" && pathname == "/")  highlight_class = "is-active";
+    if (url == "/procedural/topic" && pathname == "/")  highlight_class = "is-active";
 
     return (
       <li><Link href={url} className={highlight_class} >{name}</Link></li>

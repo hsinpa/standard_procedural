@@ -6,6 +6,14 @@ export const CoockeTable = Object.freeze({
     Procedural_Language_Code : "procedural_language_code",
 });
 
+export const LangCodeTable = Object.freeze({
+    Null : "",
+    English: "en",
+    Mandarin_TW: "zh_tw",
+    Mandarin_CN: "zh_cn",
+    Korean: "kr"
+});
+
 export const PageIDTable = Object.freeze({
     Law_Learning : "law_learning",
     Law_Learning_Topic: "topic",
@@ -27,7 +35,7 @@ export const PageDataJSON : UICategoryInterface = {
         topics: [
             {
                 id: PageIDTable.Law_Learning_Topic,
-                path: "/procedural/field_selection",
+                path: "/procedural/topic",
                 title : "Topic",
                 description : "What is your topic about law?"
             } , 
@@ -39,19 +47,19 @@ export const PageDataJSON : UICategoryInterface = {
             },
             {
                 id: PageIDTable.Law_Learning_Process,
-                path: "/procedural/work",
+                path: "/procedural/process",
                 title : "Process",
                 description : "What is your topic about law?"
             },
             {
                 id: PageIDTable.Law_Learning_Presentation,
-                path: "/proc_edural/report",
+                path: "/proc_edural/presentation",
                 title : "Presentation",
                 description : "What is your topic about law?"
             },
             {
                 id: PageIDTable.Law_Learning_Conclusion,
-                path: "/procedural/note",
+                path: "/procedural/conclusion",
                 title : "Conclusion",
                 description : "What is your topic about law?"
             },

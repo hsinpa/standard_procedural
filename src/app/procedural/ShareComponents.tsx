@@ -1,4 +1,5 @@
 import { LearingResourceInterface, UITopicInterface } from "@/data_structure";
+import { LangCodeTable } from '@/static_data';
 import Link from "next/link";
 
 // export function GetContentLanguage() : string {
@@ -39,16 +40,28 @@ export function ShareTopicComponent({topic_interface, is_link} : {topic_interfac
 }
 
 
-export function LearningTitleComponent({parent_interface, topic_interface} : {parent_interface : UITopicInterface, topic_interface: UITopicInterface}) {
+export function LearningTitleComponent({parent_interface, topic_interface, lang_code, lang_callback} : 
+    {parent_interface : UITopicInterface, topic_interface: UITopicInterface, lang_code: string, lang_callback: (code: string) => void }) {
+
+    let en_btn_class = "button is-info";
+    if (lang_code == LangCodeTable.English) en_btn_class += " is-focused";
+
+    let cn_btn_class = "button is-info";
+    if (lang_code == LangCodeTable.Mandarin_TW) cn_btn_class += " is-focused";
+
+    let kr_btn_class = "button is-info";
+    if (lang_code == LangCodeTable.Korean) kr_btn_class += " is-focused";
+
     return (
         <div className="learng_title_component">
-                <div className="component_parent"><img src={parent_interface.thumbnail == undefined ? "" : parent_interface.thumbnail}></img></div>
-                <Link href={parent_interface.path}><img src="\texture\other\back.png"></img></Link>
-                <ShareTopicComponent is_link={false} topic_interface={topic_interface}></ShareTopicComponent>
-                <div className="component_langs">
-                    <button className="button is-info">CN</button>
-                    <button className="button is-info">EN</button>
-                    <button className="button is-info">KR</button></div>
+            <div className="component_parent"><img src={parent_interface.thumbnail == undefined ? "" : parent_interface.thumbnail}></img></div>
+            <Link href={parent_interface.path}><img src="\texture\other\back.png"></img></Link>
+            <ShareTopicComponent is_link={false} topic_interface={topic_interface}></ShareTopicComponent>
+            <div className="component_langs">
+                <Link className={en_btn_class} href={topic_interface.path} onClick={ () => lang_callback(LangCodeTable.English)}>CN</Link>
+                <Link className={cn_btn_class} href={topic_interface.path} onClick={ () => lang_callback(LangCodeTable.Mandarin_TW)}>EN</Link>
+                <Link className={kr_btn_class} href={topic_interface.path} onClick={ () => lang_callback(LangCodeTable.Korean)}>KR</Link>
+            </div>
         </div>
     );
 }

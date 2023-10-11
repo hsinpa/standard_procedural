@@ -117,8 +117,12 @@
     }
 
     .component_langs {
-        button {
+        a {
             margin: 0.5em;
+        }
+
+        a:focus, .is-focused  {
+            background-color: #29518b;
         }
     }
 }
