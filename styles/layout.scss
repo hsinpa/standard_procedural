@@ -34,19 +34,6 @@ body {
 
     main {
         padding: 1em;
-
-        display: inline-block;
         vertical-align:top; /* <---- this */
-    }
-}
-
-main {
-    .url_content {
-        display: block;
-        gap: 1em;
-
-        .button {
-
-        }
     }
 }

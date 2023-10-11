@@ -73,14 +73,13 @@
 
 .learng_item_component {
     border-radius: 1em;
-
     padding: 3rem 2rem;
     max-width: 35em;
+    margin: 0;
     background-repeat: no-repeat;
     background-size: auto;
     object-fit: cover;
     background-position: center;
-
     h2 {
         color: white;
         margin-bottom: 0.5em;
@@ -100,28 +99,35 @@
     }
 }
 
+.item_component_section{
+    display: flex;
+    flex-wrap: wrap;  
+    gap: 1em;
+}    
+
 .learng_title_component {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     gap: 0.5em;
-
     a {
         width: 4em;
         margin: -1.5em;
         z-index: 1;
     }
-
+    .component_parent {
+        min-width: 2em;
+    }
     .topic_component {
         margin: 0;
     }
 
     .component_langs {
-        a {
+        button {
             margin: 0.5em;
         }
 
-        a:focus, .is-focused  {
+        .is-focused  {
             background-color: #29518b;
         }
     }

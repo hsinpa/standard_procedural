@@ -14,11 +14,11 @@ export interface UITopicInterface {
     thumbnail?: string,
 }
 
-export interface LearingResourceDictInterface {
-    [subject: string]: LearingResourceInterface[];
+export interface LearningResourceDictInterface {
+    [subject: string]: LearningResourceInterface[];
 }
 
-export interface LearingResourceInterface {
+export interface LearningResourceInterface {
     id: string,
     language: "en" | "cn" | "kr" | "",
     path: string,

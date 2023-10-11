@@ -1,4 +1,4 @@
-import {UICategoryInterface, UITopicInterface, UISubjectInterface, LearingResourceDictInterface} from './data_structure';
+import {UICategoryInterface, UITopicInterface, UISubjectInterface, LearningResourceDictInterface} from './data_structure';
 
 export const SUBJECT_LAW_LEARNING = "SUBJECT_LAW_LEARNING";
 
@@ -68,7 +68,7 @@ export const PageDataJSON : UICategoryInterface = {
 }
 
 
-export const LawLearningJSON : LearingResourceDictInterface = {
+export const LawLearningJSON : LearningResourceDictInterface = {
     topic : [
         {
             id: "law_learning_chatgpt_01",
@@ -78,6 +78,15 @@ export const LawLearningJSON : LearingResourceDictInterface = {
             description: "ChatGPT is an AI-powered language model developed by OpenAI, capable of generating human-like text based on context and past conversations.",
             thumbnail: "/texture/icon/chatgpt.jpg",
             learning_tags: ["chatgpt"]
+        },
+        {
+            id: "law_learning_bard_01",
+            language: "",
+            path: "https://bard.google.com/chat",
+            title: "BARD AI",
+            description: "Discover more about Bard, a collaborative AI tool developed by Google and powered by PaLM 2 to help bring your ideas to life.",
+            thumbnail: "/texture/icon/bard.jpg",
+            learning_tags: ["bard"]
         }
     ],
     process : [
