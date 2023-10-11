@@ -47,7 +47,7 @@ export function LearningItemComponent({topic_interface} : {topic_interface: Lear
                 <p>{topic_interface.description}</p>
 
                 <section>
-                    <Link href="" className="video_button button is-primary is-rounded"><img src="\texture\other\video_player.svg"></img><span>Learning Video</span></Link>
+                    <Link href="" className="video_button button is-primary is-rounded"><img src=".\texture\other\video_player.svg"></img><span>Learning Video</span></Link>
                 </section>
         </div>
     );

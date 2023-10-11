@@ -71,7 +71,7 @@ export function LearningTitleComponent({parent_interface, topic_interface, lang_
     return (
         <div className="learng_title_component">
             <div className="component_parent"><img src={parent_interface.thumbnail == undefined ? "" : parent_interface.thumbnail}></img></div>
-            <Link href={parent_interface.path}><img src="\texture\other\back.png"></img></Link>
+            <Link href={parent_interface.path}><img src=".\texture\other\back.png"></img></Link>
             <ShareTopicComponent is_link={false} topic_interface={topic_interface}></ShareTopicComponent>
             <div className="component_langs">
                 <button className="button is-info" key={LangCodeTable.English} onClick={ () => lang_callback(LangCodeTable.English)}>EN</button>
