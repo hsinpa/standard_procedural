@@ -1,4 +1,5 @@
 import {UICategoryInterface, UITopicInterface, UISubjectInterface, LearningResourceDictInterface} from './data_structure';
+import {Combine_Path} from './utility/dynamic_utility';
 
 export const SUBJECT_LAW_LEARNING = "SUBJECT_LAW_LEARNING";
 
@@ -29,7 +30,7 @@ export const PageDataJSON : UICategoryInterface = {
         id: PageIDTable.Law_Learning,
         path: "/procedural",
         title: "Law Learning",
-        thumbnail: "./texture/icon/law_learning.jpg",
+        thumbnail: Combine_Path("texture/icon/law_learning.jpg"),
         description: "For law user to study accelerated",
 
         topics: [
@@ -76,7 +77,7 @@ export const LawLearningJSON : LearningResourceDictInterface = {
             path: "https://chat.openai.com/",
             title: "ChatGPT",
             description: "ChatGPT is an AI-powered language model developed by OpenAI, capable of generating human-like text based on context and past conversations.",
-            thumbnail: "./texture/icon/chatgpt.jpg",
+            thumbnail: Combine_Path("texture/icon/chatgpt.jpg"),
             learning_tags: ["chatgpt"]
         },
         {
@@ -85,7 +86,7 @@ export const LawLearningJSON : LearningResourceDictInterface = {
             path: "https://bard.google.com/chat",
             title: "BARD AI",
             description: "Discover more about Bard, a collaborative AI tool developed by Google and powered by PaLM 2 to help bring your ideas to life.",
-            thumbnail: "./texture/icon/bard.jpg",
+            thumbnail: Combine_Path("texture/icon/bard.jpg"),
             learning_tags: ["bard"]
         }
     ],
@@ -96,7 +97,7 @@ export const LawLearningJSON : LearningResourceDictInterface = {
             path: "https://bard.google.com/chat",
             title: "BARD AI",
             description: "Discover more about Bard, a collaborative AI tool developed by Google and powered by PaLM 2 to help bring your ideas to life.",
-            thumbnail: "./texture/icon/bard.jpg",
+            thumbnail: Combine_Path("texture/icon/bard.jpg"),
             learning_tags: ["bard"]
         }
     ],
@@ -107,7 +108,7 @@ export const LawLearningJSON : LearningResourceDictInterface = {
             path: "https://inflection.ai/",
             title: "Inflection AI",
             description: "We are an AI studio creating a personal AI for everyone.",
-            thumbnail: "./texture/icon/inflection.jpg",
+            thumbnail:  Combine_Path("texture/icon/inflection.jpg"),
             learning_tags: ["inflection"]
         }
     ],
@@ -118,7 +119,7 @@ export const LawLearningJSON : LearningResourceDictInterface = {
             path: "https://chat.openai.com/",
             title: "ChatGPT",
             description: "ChatGPT is an AI-powered language model developed by OpenAI, capable of generating human-like text based on context and past conversations.",
-            thumbnail: "./texture/icon/chatgpt.jpg",
+            thumbnail: Combine_Path("texture/icon/chatgpt.jpg"),
             learning_tags: ["chatgpt"]
         }
     ],
@@ -129,7 +130,7 @@ export const LawLearningJSON : LearningResourceDictInterface = {
             path: "https://chat.openai.com/",
             title: "ChatGPT",
             description: "ChatGPT is an AI-powered language model developed by OpenAI, capable of generating human-like text based on context and past conversations.",
-            thumbnail: "./texture/icon/chatgpt.jpg",
+            thumbnail: Combine_Path("texture/icon/chatgpt.jpg"),
             learning_tags: ["chatgpt"]
         }
     ]

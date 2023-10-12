@@ -1,7 +1,7 @@
 'use client';
 import {useState, useEffect} from 'react';
 
-import { getCookie, setCookie } from '@/utility/dynamic_utility';
+import { Combine_Path, get_cookie, set_cookie } from '@/utility/dynamic_utility';
 import { GetSubjectComponent, GetTopicComponent, LawLearningJSON, PageIDTable, CoockeTable, LangCodeTable } from '@/static_data';
 import { LearningItemComponent, ShareTopicComponent } from './ShareComponents';
 import { LearningResourceInterface, UITopicInterface } from '@/data_structure';
@@ -14,7 +14,7 @@ export const GetProceduralComponent = (topic_id : string) => {
 
     if (parent_interface == null || topic_interface == null) return (<div></div>);
 
-    let current_lang = getCookie(CoockeTable.Procedural_Language_Code, LangCodeTable.English);
+    let current_lang = get_cookie(CoockeTable.Procedural_Language_Code, LangCodeTable.English);
     const [langcode, setLangCode] = useState<string>(current_lang);
     learning_comps = LawLearningJSON[topic_id].filter(x=>x.language == "" || x.language == langcode);
     
@@ -26,7 +26,7 @@ export const GetProceduralComponent = (topic_id : string) => {
 
     function onLangCallback(code: string) {
         console.log(code);
-        setCookie(CoockeTable.Procedural_Language_Code, code, 30);
+        set_cookie(CoockeTable.Procedural_Language_Code, code, 30);
         setLangCode(code);
     }
 
@@ -71,7 +71,7 @@ export function LearningTitleComponent({parent_interface, topic_interface, lang_
     return (
         <div className="learng_title_component">
             <div className="component_parent"><img src={parent_interface.thumbnail == undefined ? "" : parent_interface.thumbnail}></img></div>
-            <Link href={parent_interface.path}><img src=".\texture\other\back.png"></img></Link>
+            <Link href={parent_interface.path}><img src= {Combine_Path("texture/other/back.png")}></img></Link>
             <ShareTopicComponent is_link={false} topic_interface={topic_interface}></ShareTopicComponent>
             <div className="component_langs">
                 <button className="button is-info" key={LangCodeTable.English} onClick={ () => lang_callback(LangCodeTable.English)}>EN</button>

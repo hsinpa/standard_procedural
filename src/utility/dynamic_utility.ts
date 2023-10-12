@@ -1,4 +1,4 @@
-export function setCookie(cname : string, cvalue: string, expire_days: number) {
+export function set_cookie(cname : string, cvalue: string, expire_days: number) {
   try {
     const d = new Date();
     d.setTime(d.getTime() + (expire_days*24*60*60*1000));
@@ -9,7 +9,7 @@ export function setCookie(cname : string, cvalue: string, expire_days: number) {
   }
 }
 
-export function getCookie(cname : string, p_default: string = "") {
+export function get_cookie(cname : string, p_default: string = "") {
   try {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(window.document.cookie);
@@ -27,4 +27,8 @@ export function getCookie(cname : string, p_default: string = "") {
 
   }
   return p_default
+  }
+
+  export function Combine_Path(path: string) {
+    return process.env.NEXT_PUBLIC_ROOT_PATH + path;
   }
